@@ -6,6 +6,11 @@ cron: 20 10 * * *
 new Env('禁用重复任务');
 '''
 
+# 环境变量
+# REPO_SORT_LIST="black1,black2,black3,......"
+# 当有同名重复任务时，优先保留black1的任务，然后是black2、black3，优先级按填写顺序依次降低，逗号分隔
+
+
 import os
 import time
 import json
@@ -17,9 +22,6 @@ if 'REPO_SORT_LIST' in os.environ:
     repo_sort_list = os.getenv('REPO_SORT_LIST').split(',')
 else:
     repo_sort_list = []
-
-
-# substr = "shufflewzc_faker2"
 
 
 def send_notify(title='禁用重复任务', content=''):
