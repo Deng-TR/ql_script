@@ -1,6 +1,10 @@
 # coding: utf-8
 # __author__ = JimDeng
 # __time__   = '2021/11/11 13:12'
+'''
+cron: 20 10 * * *
+new Env('禁用重复任务');
+'''
 
 import os
 import time
