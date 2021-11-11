@@ -71,7 +71,7 @@ def get_repeat_task(task_list):
     """
     rep_dict = {}
     disable_list = []
-    task_name_list = [i['name'] for i in task_list if i['isDisabled'] == 0]
+    task_name_list = [i['name'] for i in task_list]
     # 名字重复的任务列表
     repeat_task_list = [k for k, v in Counter(task_name_list).items() if v > 1]
     for task in task_list:
