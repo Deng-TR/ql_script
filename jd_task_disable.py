@@ -107,7 +107,8 @@ def load_token():
         with open("/ql/config/auth.json","r",encoding="utf-8") as f:
             token = json.load(f)['token']
     except Exception as e:
-        send_notify(content="获取token异常：%s" % e)
+        # send_notify(content="获取token异常：%s" % e)
+        print("获取token异常：%s" % e)
         token = ''
     return token
 
@@ -127,4 +128,5 @@ if __name__ == '__main__':
         print("没有重复任务")
     else:
         disable_tasks(disable_list)
-        send_notify("禁用成功", "\n%s\n%s" % (before,after))
+        # send_notify("禁用成功", "\n%s\n%s" % (before,after))
+        print("禁用成功", "\n%s\n%s" % (before,after))
