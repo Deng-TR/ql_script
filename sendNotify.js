@@ -307,6 +307,7 @@ async function sendNotify(text, desp, params = {}, author = '\n\n本通知 By cc
                                 var MessageUserGp2 = "";
                                 var MessageUserGp3 = "";
                                 var MessageUserGp4 = "";
+                                var MessageUserGp5 = "";
 
                                 var userIndex2 = -1;
                                 var userIndex3 = -1;
